@@ -4,6 +4,6 @@ const authRoutes=express.Router();
 
 authRoutes.post("/signup",signup)
 authRoutes.post("/login",login)
-authRoutes.get("/logout",logout)
+authRoutes.post("/logout",logout)
 
 exports.authRoutes=authRoutes;

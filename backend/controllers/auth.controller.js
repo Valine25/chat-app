@@ -58,6 +58,13 @@ userName:user.userName
   }
   console.log("LoginUser")
 }
-exports.logout=async(req,res)=>{
+exports.logout=(req,res)=>{
   console.log("LogoutUser")
+  try {
+    res.cookie("jwt","",{maxAge:0})
+    res.status(200).json({message:"Logged out successfully"})
+  } catch (error) {
+    console.log("Error from logout",error.message)
+    res.status(500).json({error:"Internal server error"})
+  }
 }
