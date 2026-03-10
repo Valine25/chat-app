@@ -19,8 +19,10 @@ const userSchema= new mongoose.Schema({
     type:String,
     required:true,
     enum:["male","female"]
-  }
-})
+  },
+},{ 
+    timestamps:true
+  })
 
 const User=mongoose.model("User",userSchema)
 
