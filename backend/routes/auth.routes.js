@@ -3,7 +3,7 @@ const { signup, login, logout } = require("../controllers/auth.controller.js");
 const authRoutes=express.Router();
 
 authRoutes.post("/signup",signup)
-authRoutes.get("/login",login)
+authRoutes.post("/login",login)
 authRoutes.get("/logout",logout)
 
 exports.authRoutes=authRoutes;
