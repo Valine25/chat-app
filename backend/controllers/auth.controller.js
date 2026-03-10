@@ -1,0 +1,9 @@
+exports.signup=(req,res)=>{
+  console.log("SignupUser")
+}
+exports.login=(req,res)=>{
+  console.log("LoginUser")
+}
+exports.logout=(req,res)=>{
+  console.log("LogoutUser")
+}
